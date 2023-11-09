@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 import 'package:plants/Screens/MainScreen.dart';
+import 'package:plants/Screens/MapScreen.dart';
 
 void main() {
+  AuthRepository.initialize(appKey: '17eadd0cc722ec44323a286f5534d4b1');
   runApp(const MyApp());
 }
 
@@ -11,13 +15,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MainScreen(),
+      home: MapScreen(),
     );
   }
 }
