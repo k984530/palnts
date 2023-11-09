@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
-import 'package:plants/Screens/MainScreen.dart';
 import 'package:plants/Screens/MapScreen.dart';
 
 void main() {

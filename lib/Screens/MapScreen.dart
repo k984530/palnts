@@ -8,6 +8,8 @@ class MapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final DraggableScrollableController bottomController =
+        DraggableScrollableController();
     return Stack(
       children: [
         KakaoMap(
@@ -18,6 +20,33 @@ class MapScreen extends StatelessWidget {
             print(latLng);
           },
         ),
+        SizedBox.expand(
+          child: DraggableScrollableSheet(
+            minChildSize: 0.1,
+            initialChildSize: 0.25,
+            controller: bottomController,
+            builder: (context, scrollController) {
+              return Container(
+                decoration: BoxDecoration(
+                  color: Colors.green[300],
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(
+                      40,
+                    ),
+                  ),
+                ),
+                child: ListView.builder(
+                    controller: scrollController,
+                    itemCount: 1,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        height: 50,
+                      );
+                    }),
+              );
+            },
+          ),
+        )
       ],
     );
   }
