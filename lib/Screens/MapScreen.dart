@@ -23,11 +23,17 @@ class MapScreen extends StatelessWidget {
             onMapCreated: (controller) async {
               mapController = controller;
               // mapController.addMarker(markers: [Marker(latLng: )])
+
               mapController.addMarker(
                 markers: [
                   Marker(
-                      markerId: 'test',
-                      latLng: LatLng(33.44986152248232, 126.57050723840896)),
+                    markerId: 'test',
+                    latLng: LatLng(33.44986152248232, 126.57050723840896),
+                  ),
+                  Marker(
+                    markerId: 'test2',
+                    latLng: LatLng(33.450560189752, 126.57133888182207),
+                  ),
                 ],
               );
             },
@@ -35,6 +41,35 @@ class MapScreen extends StatelessWidget {
             onMapTap: (latLng) {
               print(latLng);
             },
+          ),
+          Positioned(
+            bottom: 70,
+            right: 30,
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed('/Resister');
+              },
+              child: Container(
+                width: 60,
+                height: 60,
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.green[300],
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 1,
+                      spreadRadius: 1,
+                      offset: Offset(4, 4),
+                      color: Colors.grey,
+                    )
+                  ],
+                ),
+                child: Image.asset(
+                  'images/plants.png',
+                ),
+              ),
+            ),
           ),
           SizedBox.expand(
             child: DraggableScrollableSheet(
