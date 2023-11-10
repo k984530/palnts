@@ -18,14 +18,13 @@ class MapScreen extends StatelessWidget {
             onMapCreated: (controller) async {
               mapController = controller;
               // mapController.addMarker(markers: [Marker(latLng: )])
-              
-                mapController.addMarker(
-                  markers: [
-                    Marker(
-                        markerId: 'test',
-                        latLng: LatLng(33.44986152248232, 126.57050723840896))
-                  ],
-                
+
+              mapController.addMarker(
+                markers: [
+                  Marker(
+                      markerId: 'test',
+                      latLng: LatLng(33.44986152248232, 126.57050723840896))
+                ],
               );
             },
             onMarkerTap: (markerId, latLng, zoomLevel) => Get.toNamed("/Store"),
@@ -36,7 +35,7 @@ class MapScreen extends StatelessWidget {
           SizedBox.expand(
             child: DraggableScrollableSheet(
               minChildSize: 0.1,
-              initialChildSize: 0.25,
+              initialChildSize: 0.1,
               controller: bottomController,
               builder: (context, scrollController) {
                 return Container(
@@ -45,11 +44,10 @@ class MapScreen extends StatelessWidget {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, -10)
-                      )
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, -10))
                     ],
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(
@@ -60,8 +58,7 @@ class MapScreen extends StatelessWidget {
                   child: ListView.builder(
                     controller: scrollController,
                     itemCount: 1,
-                    itemBuilder: (context, index) {
-                    },
+                    itemBuilder: (context, index) {},
                   ),
                 );
               },

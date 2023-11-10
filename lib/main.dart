@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants/Screens/MydataScreen.dart';
 import 'package:plants/Screens/SelectScreen.dart';
 import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
@@ -13,6 +14,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'Screens/MapScreen.dart';
 
 void main() {
+  AuthRepository.initialize(appKey: '17eadd0cc722ec44323a286f5534d4b1');
   runApp(const MyApp());
 }
 
@@ -27,8 +29,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: MapScreen(),
-      home: SelectScreen(),
+      // home: SelectScreen(),
+      home: MydataScreen(),
       getPages: [
         GetPage(
           name: '/Map',
