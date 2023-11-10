@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:plants/Screens/MyGardenScreen.dart';
 import 'package:plants/Screens/MydataScreen.dart';
+import 'package:plants/Screens/OthersDataScreen.dart';
 import 'package:plants/Screens/OthersPlantsScreen.dart';
 import 'package:plants/Screens/SelectScreen.dart';
 import 'package:plants/Screens/Calendar.dart';
@@ -69,6 +70,18 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/OthersPlants',
           page: () => OthersPlantsScreen(),
+        ),
+        GetPage(
+          name: '/OthersPlants',
+          page: () => OthersPlantsScreen(),
+        ),
+        GetPage(
+          name: '/MyData',
+          page: () => MydataScreen(),
+        ),
+        GetPage(
+          name: '/OtherData',
+          page: () => OtherdataScreen(),
         ),
       ],
     );

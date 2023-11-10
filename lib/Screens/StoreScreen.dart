@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/route_manager.dart';
+import 'package:plants/Data/PlantsName.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -8,9 +9,10 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
       appBar: AppBar(
         backgroundColor: Colors.green.shade400,
+        elevation: 3,
+        shadowColor: Colors.grey,
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
           IconButton(
@@ -109,7 +111,7 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.brown.shade200,
+                            color: Colors.brown.shade100,
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
@@ -124,11 +126,15 @@ class StoreScreen extends StatelessWidget {
                           ),
                           child: Row(
                             children: [
-                              Image.asset('images/plant.jpeg'),
+                              Image.asset(
+                                  'images/plant' + i.toString() + '.jpeg'),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
                                 child: Text(
-                                  "이름 : 새싹이\n품종 : 알로에",
+                                  "이름 : " +
+                                      PlantsName[i] +
+                                      "\n품종 : " +
+                                      Plantskind[i],
                                   textAlign: TextAlign.center,
                                 ),
                               ),

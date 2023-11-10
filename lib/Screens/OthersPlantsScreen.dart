@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class OthersPlantsScreen extends StatelessWidget {
   const OthersPlantsScreen({super.key});
@@ -6,7 +7,12 @@ class OthersPlantsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.green.shade400,
+        elevation: 3,
+        shadowColor: Colors.grey,
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -14,25 +20,30 @@ class OthersPlantsScreen extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                Container(
-                  height: 200,
-                  width: 130,
-                  margin: EdgeInsets.symmetric(horizontal: 10, vertical: 13),
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage(
-                        'images/plant0.jpeg',
+                GestureDetector(
+                  onTap: () {
+                    Get.toNamed('/OtherData');
+                  },
+                  child: Container(
+                    height: 200,
+                    width: 130,
+                    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 13),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage(
+                          'images/plant0.jpeg',
+                        ),
                       ),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                            blurRadius: 10,
+                            spreadRadius: 3,
+                            offset: Offset(2, 6),
+                            color: Colors.black38),
+                      ],
                     ),
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 10,
-                          spreadRadius: 3,
-                          offset: Offset(2, 6),
-                          color: Colors.black38),
-                    ],
                   ),
                 ),
                 Container(

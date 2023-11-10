@@ -5,15 +5,14 @@ import 'package:syncfusion_flutter_charts/charts.dart';
 
 import '../Data/PlantsData.dart';
 
-class MydataScreen extends StatelessWidget {
-  const MydataScreen({super.key});
+class OtherdataScreen extends StatelessWidget {
+  const OtherdataScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("식물 상세정보"),
         centerTitle: true,
         titleTextStyle: TextStyle(
           color: Colors.white,

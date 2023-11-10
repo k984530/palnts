@@ -17,7 +17,12 @@ class MapScreen extends StatelessWidget {
         DraggableScrollableController();
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.green.shade400,
+        elevation: 3,
+        shadowColor: Colors.grey,
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
       body: Stack(
         children: <Widget>[
           KakaoMap(
@@ -136,7 +141,7 @@ class MapScreen extends StatelessWidget {
                             },
                             child: ListTile(
                               title: Text(
-                                "가게 1",
+                                "[그 계절]",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w700, fontSize: 22),
                               ),
@@ -169,7 +174,7 @@ class MapScreen extends StatelessWidget {
                           Divider(color: Colors.grey),
                           ListTile(
                             title: Text(
-                              "가게 2",
+                              "매지 가게",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 22),
                             ),
@@ -200,7 +205,7 @@ class MapScreen extends StatelessWidget {
                           Divider(color: Colors.grey),
                           ListTile(
                             title: Text(
-                              "가게 3",
+                              "행운 식당",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 22),
                             ),
@@ -231,7 +236,7 @@ class MapScreen extends StatelessWidget {
                           Divider(color: Colors.grey),
                           ListTile(
                             title: Text(
-                              "가게 4",
+                              "Feel 돈까스",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 22),
                             ),

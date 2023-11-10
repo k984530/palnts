@@ -7,19 +7,11 @@ class PlantProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Get.toNamed('/Chat');
-        },
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(45),
-        ),
-        child: Icon(
-          Icons.message_outlined,
-        ),
-      ),
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green.shade400,
+        elevation: 3,
+        shadowColor: Colors.grey,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Center(
         child: Column(
@@ -53,19 +45,6 @@ class PlantProfileScreen extends StatelessWidget {
                 Container(
                   width: 35,
                   height: 35,
-                  margin: EdgeInsets.only(right: 10),
-                  decoration: BoxDecoration(
-                    color: Colors.brown,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                ),
-                Container(
-                  width: 35,
-                  height: 35,
                   margin: EdgeInsets.only(right: 20),
                   decoration: BoxDecoration(
                     color: Colors.brown,
@@ -84,11 +63,11 @@ class PlantProfileScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                color: Colors.green[200],
+                color: Colors.green[100],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                "식물 품종",
+                "식물 품종  : 다알리아",
               ),
             ),
             Container(
@@ -96,11 +75,11 @@ class PlantProfileScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                color: Colors.green[200],
+                color: Colors.green[100],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
-                "꽃말",
+                "꽃말 : 화려함, 우아함",
               ),
             ),
             Container(
@@ -144,7 +123,7 @@ class PlantProfileScreen extends StatelessWidget {
                       child: LinearProgressIndicator(
                         value: 0.7,
                         valueColor:
-                            AlwaysStoppedAnimation<Color>(Color(0xff00ff00)),
+                            AlwaysStoppedAnimation<Color>(Colors.greenAccent),
                         backgroundColor: Color(0xffD6D6D6),
                       ),
                     ),

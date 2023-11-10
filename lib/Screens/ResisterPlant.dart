@@ -12,16 +12,24 @@ class ResisterPlant extends StatelessWidget {
   Widget build(BuildContext context) {
     final img = Get.put(PersonalPlant());
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("나만의 식물 등록"),
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
+        backgroundColor: Colors.green.shade400,
+        elevation: 3,
+        shadowColor: Colors.grey,
+        iconTheme: IconThemeData(color: Colors.white),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
               height: 15,
-            ),
-            Text(
-              "나만의 정원",
-              style: TextStyle(fontSize: 25),
             ),
             SizedBox(
               height: 15,
