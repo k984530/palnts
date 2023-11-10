@@ -1,4 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 
@@ -11,6 +16,7 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final DraggableScrollableController bottomController =
         DraggableScrollableController();
+        
     return Scaffold(
       body: Stack(
         children: [
@@ -36,6 +42,36 @@ class MapScreen extends StatelessWidget {
             onMapTap: (latLng) {
               print(latLng);
             },
+            
+          ),
+          Positioned(
+            bottom: 70,
+            right: 30,
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed('/Resister');
+              },
+              child: Container(
+                width: 60,
+                height: 60,
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.green[300],
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 1,
+                      spreadRadius: 1,
+                      offset: Offset(4, 4),
+                      color: Colors.grey,
+                    )
+                  ],
+                ),
+                child: Image.asset(
+                  'images/plants.png',
+                ),
+              ),
+            ),
           ),
           Positioned(
             bottom: 70,
