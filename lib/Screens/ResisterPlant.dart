@@ -89,31 +89,26 @@ class ResisterPlant extends StatelessWidget {
               child: Row(
                 children: [
                   Container(
-                    width: 100,
                     height: 100,
                     margin: EdgeInsets.all(2),
                     child: Image.asset('images/personal_plant1.jpeg'),
                   ),
                   Container(
-                    width: 100,
                     height: 100,
                     margin: EdgeInsets.all(2),
                     child: Image.asset('images/personal_plant2.jpeg'),
                   ),
                   Container(
-                    width: 100,
                     height: 100,
                     margin: EdgeInsets.all(2),
                     child: Image.asset('images/personal_plant3.jpeg'),
                   ),
                   Container(
-                    width: 100,
                     height: 100,
                     margin: EdgeInsets.all(2),
                     child: Image.asset('images/personal_plant4.jpeg'),
                   ),
                   Container(
-                    width: 100,
                     height: 100,
                     margin: EdgeInsets.all(2),
                     child: Image.asset('images/personal_plant5.jpeg'),
