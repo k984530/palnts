@@ -27,7 +27,7 @@ class PlantProfileScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Text(
-                'name',
+                '새싹이',
                 style: TextStyle(
                   fontSize: 24,
                 ),
@@ -39,7 +39,13 @@ class PlantProfileScreen extends StatelessWidget {
                 10,
               ),
               decoration: BoxDecoration(
-                  color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+                color: Colors.brown,
+              ),
+              child: Image(
+                image: AssetImage(
+                  'images/plant.jpeg',
+                ),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
