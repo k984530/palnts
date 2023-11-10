@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants/Screens/SelectScreen.dart';
 import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
@@ -25,9 +26,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: MapScreen(),
+      // home: MapScreen(),
+      home: SelectScreen(),
       getPages: [
-        GetPage(name: '/Map', page: () => MapScreen()),
+        GetPage(
+          name: '/Map',
+          page: () => MapScreen(),
+        ),
         GetPage(
           name: '/Store',
           page: () => StoreScreen(),
@@ -40,6 +45,10 @@ class MyApp extends StatelessWidget {
           name: '/Profile',
           page: () => PlantProfileScreen(),
         ),
+        GetPage(
+          name: '/Select',
+          page: () => SelectScreen(),
+        )
       ],
     );
   }

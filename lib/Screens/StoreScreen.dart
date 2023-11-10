@@ -10,21 +10,29 @@ class StoreScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.green,
-        flexibleSpace: Container(
-          margin: EdgeInsets.only(bottom: 10),
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            height: 40,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                alignment: Alignment.bottomCenter,
-                image: AssetImage(
-                  'images/logo2.png',
-                ),
-              ),
+        iconTheme: IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.search_outlined,
+              color: Colors.white,
+              size: 30,
             ),
+            onPressed: () {
+              print("search button");
+            },
           ),
-        ),
+          IconButton(
+            icon: Icon(
+              Icons.person_outline_sharp,
+              color: Colors.white,
+              size: 30,
+            ),
+            onPressed: () {
+              print("user button");
+            },
+          ),
+        ],
       ),
       body: Container(
         alignment: Alignment.center,
@@ -35,7 +43,7 @@ class StoreScreen extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Text(
-                "플랜테리아 카페 이름",
+                "[그계절]",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
@@ -44,10 +52,20 @@ class StoreScreen extends StatelessWidget {
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Image.asset(
                 'images/store1_1.jpg',
               ),
+            ),
+            Container(
+              child: Text(
+                "평점",
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey,
+                ),
+              ),
+              margin: EdgeInsets.all(5),
             ),
             Container(
               child: RatingBar.builder(
