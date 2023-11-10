@@ -15,7 +15,7 @@ class MapScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final DraggableScrollableController bottomController =
         DraggableScrollableController();
-        
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
@@ -23,17 +23,11 @@ class MapScreen extends StatelessWidget {
             onMapCreated: (controller) async {
               mapController = controller;
               // mapController.addMarker(markers: [Marker(latLng: )])
-
               mapController.addMarker(
                 markers: [
                   Marker(
-                    markerId: 'test',
-                    latLng: LatLng(33.44986152248232, 126.57050723840896),
-                  ),
-                  Marker(
-                    markerId: 'test2',
-                    latLng: LatLng(33.450560189752, 126.57133888182207),
-                  ),
+                      markerId: 'test',
+                      latLng: LatLng(33.44986152248232, 126.57050723840896)),
                 ],
               );
             },
@@ -41,65 +35,6 @@ class MapScreen extends StatelessWidget {
             onMapTap: (latLng) {
               print(latLng);
             },
-            
-          ),
-          Positioned(
-            bottom: 70,
-            right: 30,
-            child: GestureDetector(
-              onTap: () {
-                Get.toNamed('/Resister');
-              },
-              child: Container(
-                width: 60,
-                height: 60,
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.green[300],
-                  borderRadius: BorderRadius.circular(30),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 1,
-                      spreadRadius: 1,
-                      offset: Offset(4, 4),
-                      color: Colors.grey,
-                    )
-                  ],
-                ),
-                child: Image.asset(
-                  'images/plants.png',
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: 70,
-            right: 30,
-            child: GestureDetector(
-              onTap: () {
-                Get.toNamed('/Resister');
-              },
-              child: Container(
-                width: 60,
-                height: 60,
-                padding: EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.green[300],
-                  borderRadius: BorderRadius.circular(30),
-                  boxShadow: [
-                    BoxShadow(
-                      blurRadius: 1,
-                      spreadRadius: 1,
-                      offset: Offset(4, 4),
-                      color: Colors.grey,
-                    )
-                  ],
-                ),
-                child: Image.asset(
-                  'images/plants.png',
-                ),
-              ),
-            ),
           ),
           SizedBox.expand(
             child: DraggableScrollableSheet(
@@ -109,7 +44,6 @@ class MapScreen extends StatelessWidget {
               builder: (context, scrollController) {
                 return Container(
                   decoration: BoxDecoration(
-                    // color: Colors.green[300],
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
@@ -120,69 +54,158 @@ class MapScreen extends StatelessWidget {
                       ),
                     ],
                     borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(
-                        40,
-                      ),
+                      top: Radius.circular(40),
                     ),
                   ),
-                  child: ListView(
-                    controller: scrollController,
+                  child: Stack(
                     children: [
-                      ListTile(
-                        title: Text("\t\t가게 이름",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 22),
-                        ),
-                      ),
-                      Container(
-                        alignment: Alignment.center,
-                        padding: EdgeInsets.all(5),
-                        child: Container(
-                          width: 320, height: 230,
-                          decoration: BoxDecoration(
-                            // shape: BoxShape.rectangle,
-                            // color: Colors.amber,
-                            image: DecorationImage(
-                            image: AssetImage('images/store2.jpeg'),
+                      ListView(
+                        controller: scrollController,
+                        children: <Widget>[
+                          ListTile(
+                            title: Text(
+                              "가게 1",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 22),
                             ),
-                          ),
-                        ),
-                        
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(left: 35, top:10),
-                        
-                        child: Text("평점",
-                            style: TextStyle(
-                              fontSize: 20,
+                            trailing: Container(
+                              alignment: Alignment.bottomRight,
+                              width: 150,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('images/store2.jpeg'),
+                                ),
                               ),
                             ),
+                            subtitle: RatingBar.builder(
+                              itemSize: 15,
+                              initialRating: 4.5,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemBuilder: (context, _) => Icon(
+                                Icons.star,
+                                color: const Color.fromARGB(255, 26, 182, 107),
+                              ),
+                              onRatingUpdate: (double value) {},
+                            ),
+                          ),
+                          Divider(color: Colors.grey),
+                          ListTile(
+                            title: Text(
+                              "가게 2",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 22),
+                            ),
+                            trailing: Container(
+                              alignment: Alignment.bottomRight,
+                              width: 150,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('images/store3.jpeg'),
+                                ),
+                              ),
+                            ),
+                            subtitle: RatingBar.builder(
+                              itemSize: 15,
+                              initialRating: 3,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemBuilder: (context, _) => Icon(
+                                Icons.star,
+                                color: const Color.fromARGB(255, 26, 182, 107),
+                              ),
+                              onRatingUpdate: (double value) {},
+                            ),
+                          ),
+                          Divider(color: Colors.grey),
+                          ListTile(
+                            title: Text(
+                              "가게 3",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 22),
+                            ),
+                            trailing: Container(
+                              alignment: Alignment.bottomRight,
+                              width: 150,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('images/store4.jpeg'),
+                                ),
+                              ),
+                            ),
+                            subtitle: RatingBar.builder(
+                              itemSize: 15,
+                              initialRating: 4,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemBuilder: (context, _) => Icon(
+                                Icons.star,
+                                color: const Color.fromARGB(255, 26, 182, 107),
+                              ),
+                              onRatingUpdate: (double value) {},
+                            ),
+                          ),
+                          Divider(color: Colors.grey),
+                          ListTile(
+                            title: Text(
+                              "가게 4",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 22),
+                            ),
+                            trailing: Container(
+                              alignment: Alignment.bottomRight,
+                              width: 150,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage('images/store5.jpeg'),
+                                ),
+                              ),
+                            ),
+                            subtitle: RatingBar.builder(
+                              itemSize: 15,
+                              initialRating: 5,
+                              minRating: 1,
+                              direction: Axis.horizontal,
+                              allowHalfRating: true,
+                              itemCount: 5,
+                              itemBuilder: (context, _) => Icon(
+                                Icons.star,
+                                color: const Color.fromARGB(255, 26, 182, 107),
+                              ),
+                              onRatingUpdate: (double value) {},
+                            ),
+                          ),
+                          Divider(
+                              color: const Color.fromARGB(255, 123, 123, 123)),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.only(left: 35),
-                        alignment: Alignment.bottomLeft,
-                        child: RatingBar.builder(
-                        itemSize: 20,
-                        initialRating: 3,
-                        minRating: 1,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        itemBuilder: (context, _) => Icon(
-                          Icons.star,
-                          color: const Color.fromARGB(255, 26, 182, 107),
-                        ), onRatingUpdate: (double value) {  },
-                      ),
+                      Positioned(
+                        top: 15,
+                        left: 170,
+                        right: 170,
+                        child: Container(
+                          height: 4,
+                          width: 5,
+                          decoration: BoxDecoration(
+                            color: Colors.grey,
+                            borderRadius: BorderRadius.circular(2),
+                          ),
+                        ),
                       ),
                     ],
                   ),
-                
                 );
-
-                
               },
-
             ),
           ),
         ],
