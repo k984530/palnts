@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: SelectScreen(),
-      home: MydataScreen(),
+      home: SelectScreen(),
       getPages: [
         GetPage(
           name: '/Map',
