@@ -8,6 +8,7 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[50],
       appBar: AppBar(
         backgroundColor: Colors.green,
         iconTheme: IconThemeData(color: Colors.white),
@@ -53,8 +54,16 @@ class StoreScreen extends StatelessWidget {
             ),
             Expanded(
               flex: 3,
-              child: Image.asset(
-                'images/store1_1.jpg',
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/store1_1.jpg',
+                  ),
+                  Image.asset(
+                    'images/store1_2.jpg',
+                  ),
+                ],
               ),
             ),
             Container(
@@ -95,12 +104,27 @@ class StoreScreen extends StatelessWidget {
                         },
                         child: Container(
                           height: 80,
+                          padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.brown[(i + 1) % 9 * 100],
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset('images/plant.jpeg'),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "이름 : 새싹이\n품종 : 알로에",
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(Icons.arrow_forward_ios_sharp)
+                            ],
                           ),
                         ),
                       )
