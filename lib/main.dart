@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants/Screens/MyGardenScreen.dart';
 import 'package:plants/Screens/SelectScreen.dart';
 import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
@@ -57,7 +58,11 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/Resister',
           page: () => ResisterPlant(),
-        )
+        ),
+        GetPage(
+          name: '/MyGarden',
+          page: () => MyGardenScreen(),
+        ),
       ],
     );
   }

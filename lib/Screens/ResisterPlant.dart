@@ -54,6 +54,14 @@ class ResisterPlant extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.green[400],
                     borderRadius: BorderRadius.circular(30),
+                    boxShadow: [
+                      BoxShadow(
+                        spreadRadius: 2,
+                        blurRadius: 2,
+                        offset: Offset(0, 4),
+                        color: Colors.grey,
+                      )
+                    ],
                   ),
                   child: Icon(
                     Icons.camera_alt_outlined,
@@ -71,6 +79,14 @@ class ResisterPlant extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.green[400],
                       borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          spreadRadius: 2,
+                          blurRadius: 2,
+                          offset: Offset(0, 4),
+                          color: Colors.grey,
+                        )
+                      ],
                     ),
                     child: Icon(
                       Icons.image,
@@ -125,7 +141,9 @@ class ResisterPlant extends StatelessWidget {
               () {
                 if (img.flag.value)
                   return GestureDetector(
-                    onTap: () async {},
+                    onTap: () {
+                      Get.toNamed('/MyGarden');
+                    },
                     child: Container(
                       margin: EdgeInsets.only(top: 20),
                       width: 60,
@@ -133,6 +151,14 @@ class ResisterPlant extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: Colors.green[400],
                         borderRadius: BorderRadius.circular(30),
+                        boxShadow: [
+                          BoxShadow(
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 4),
+                            color: Colors.grey,
+                          )
+                        ],
                       ),
                       child: Icon(
                         Icons.check,
