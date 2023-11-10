@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
+import 'package:plants/Screens/ChatScreen.dart';
 import 'package:plants/Screens/MapScreen.dart';
 import 'package:plants/Screens/PlantProfileScreen.dart';
 
@@ -23,6 +24,12 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: PlantProfileScreen(),
+      getPages: [
+        GetPage(
+          name: '/Chat',
+          page: () => ChatScreen(),
+        ),
+      ],
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PlantProfileScreen extends StatelessWidget {
   const PlantProfileScreen({super.key});
@@ -7,7 +8,9 @@ class PlantProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/Chat');
+        },
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(45),
         ),
