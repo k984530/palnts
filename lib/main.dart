@@ -13,6 +13,8 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import 'Screens/MapScreen.dart';
 
+import 'Screens/ResisterPlant.dart';
+
 void main() {
   AuthRepository.initialize(appKey: '17eadd0cc722ec44323a286f5534d4b1');
   runApp(const MyApp());
@@ -24,6 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -51,6 +54,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/Select',
           page: () => SelectScreen(),
+        ),
+        GetPage(
+          name: '/Resister',
+          page: () => ResisterPlant(),
         )
       ],
     );

@@ -26,16 +26,21 @@ class SelectScreen extends StatelessWidget {
             Spacer(
               flex: 2,
             ),
-            Container(
-              margin: EdgeInsets.all(15),
-              height: 40,
-              color: Colors.green[400],
-              alignment: Alignment.center,
-              child: Text(
-                "나만의 정원",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+            GestureDetector(
+              onTap: () {
+                Get.toNamed('/Resister');
+              },
+              child: Container(
+                margin: EdgeInsets.all(15),
+                height: 40,
+                color: Colors.green[400],
+                alignment: Alignment.center,
+                child: Text(
+                  "나만의 정원",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
