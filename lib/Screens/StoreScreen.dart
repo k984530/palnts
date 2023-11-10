@@ -10,7 +10,7 @@ class StoreScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.green[50],
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green.shade400,
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
           IconButton(
@@ -43,12 +43,14 @@ class StoreScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: Text(
-                "[그계절]",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.brown,
+              child: Center(
+                child: Text(
+                  "[그계절]",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.brown,
+                  ),
                 ),
               ),
             ),
@@ -107,10 +109,18 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.brown[(i + 1) % 9 * 100],
+                            color: Colors.brown.shade200,
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
+                            boxShadow: [
+                              BoxShadow(
+                                offset: Offset(0, 4),
+                                blurRadius: 2,
+                                spreadRadius: 1,
+                                color: Colors.black45,
+                              ),
+                            ],
                           ),
                           child: Row(
                             children: [
