@@ -18,14 +18,14 @@ class MapScreen extends StatelessWidget {
             onMapCreated: (controller) async {
               mapController = controller;
               // mapController.addMarker(markers: [Marker(latLng: )])
-              print(
+              
                 mapController.addMarker(
                   markers: [
                     Marker(
                         markerId: 'test',
                         latLng: LatLng(33.44986152248232, 126.57050723840896))
                   ],
-                ),
+                
               );
             },
             onMarkerTap: (markerId, latLng, zoomLevel) => Get.toNamed("/Store"),
@@ -42,6 +42,14 @@ class MapScreen extends StatelessWidget {
                 return Container(
                   decoration: BoxDecoration(
                     color: Colors.green[300],
+                    // color: Color.fromRGBO(212, 212, 212, 1),
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.grey.withOpacity(0.2),
+                    //     spreadRadius: 15,
+                    //     blurRadius: 10,
+                    //     offset: Offset(0, 2),
+                    //   )
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(
                         40,
@@ -52,13 +60,6 @@ class MapScreen extends StatelessWidget {
                     controller: scrollController,
                     itemCount: 1,
                     itemBuilder: (context, index) {
-                      return GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                          height: 50,
-                          color: Colors.amber,
-                        ),
-                      );
                     },
                   ),
                 );
