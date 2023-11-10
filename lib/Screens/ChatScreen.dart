@@ -12,6 +12,9 @@ class ChatScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(
+            height: 10,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -61,16 +64,24 @@ class ChatScreen extends StatelessWidget {
           Row(
             children: [
               Flexible(
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    filled: true,
-                    fillColor: Colors.green[100],
+                child: Container(
+                  height: 40,
+                  margin: EdgeInsets.only(bottom: 10, left: 20, right: 20),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(25)),
+                      border: InputBorder.none,
+                      filled: true,
+                      fillColor: Colors.green[100],
+                    ),
                   ),
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 4),
+                margin: EdgeInsets.only(right: 10, bottom: 10),
+                alignment: Alignment.center,
                 child: Icon(Icons.send),
               )
             ],

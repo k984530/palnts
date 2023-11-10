@@ -41,8 +41,40 @@ class PlantProfileScreen extends StatelessWidget {
               decoration: BoxDecoration(
                   color: Colors.amber, borderRadius: BorderRadius.circular(10)),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  width: 35,
+                  height: 35,
+                  margin: EdgeInsets.only(right: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  ),
+                ),
+                Container(
+                  width: 35,
+                  height: 35,
+                  margin: EdgeInsets.only(right: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(
+                    Icons.favorite,
+                    size: 20,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
+            ),
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 10),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
