@@ -8,6 +8,7 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[50],
       appBar: AppBar(
         backgroundColor: Colors.green,
         flexibleSpace: Container(
@@ -34,12 +35,14 @@ class StoreScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: Text(
-                "플랜테리아 카페 이름",
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.brown,
+              child: Center(
+                child: Text(
+                  "플랜테리아 카페 이름",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.brown,
+                  ),
                 ),
               ),
             ),
@@ -77,12 +80,27 @@ class StoreScreen extends StatelessWidget {
                         },
                         child: Container(
                           height: 80,
+                          padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: Colors.brown[(i + 1) % 9 * 100],
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset('images/plant.jpeg'),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "이름 : 새싹이\n품종 : 알로에",
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(Icons.arrow_forward_ios_sharp)
+                            ],
                           ),
                         ),
                       )
