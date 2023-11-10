@@ -41,15 +41,16 @@ class MapScreen extends StatelessWidget {
               builder: (context, scrollController) {
                 return Container(
                   decoration: BoxDecoration(
-                    color: Colors.green[300],
-                    // color: Color.fromRGBO(212, 212, 212, 1),
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: Colors.grey.withOpacity(0.2),
-                    //     spreadRadius: 15,
-                    //     blurRadius: 10,
-                    //     offset: Offset(0, 2),
-                    //   )
+                    // color: Colors.green[300],
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, -10)
+                      )
+                    ],
                     borderRadius: BorderRadius.vertical(
                       top: Radius.circular(
                         40,
