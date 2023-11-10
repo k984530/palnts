@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
+import 'package:get/get_navigation/src/routes/default_transitions.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 
@@ -17,7 +18,7 @@ class MapScreen extends StatelessWidget {
         
     return Scaffold(
       body: Stack(
-        children: [
+        children: <Widget>[
           KakaoMap(
             onMapCreated: (controller) async {
               mapController = controller;
@@ -103,60 +104,85 @@ class MapScreen extends StatelessWidget {
           SizedBox.expand(
             child: DraggableScrollableSheet(
               minChildSize: 0.1,
-              maxChildSize: 0.80,
-              initialChildSize: 0.2,
-              builder:
-                  (BuildContext context, ScrollController scrollController) {
-                return SingleChildScrollView(
-                  // Consuming the scrollController provided
-                  controller: scrollController,
-                  child: Container(
-                    margin: EdgeInsets.only(
-                        top: 0.05 * MediaQuery.of(context).size.height),
-                    height: 0.75 * MediaQuery.of(context).size.height,
-
-                    // Generic Designing of the sheet
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.only(
-                        topRight: Radius.circular(30.0),
-                        topLeft: Radius.circular(30.0),
+              initialChildSize: 0.25,
+              controller: bottomController,
+              builder: (context, scrollController) {
+                return Container(
+                  decoration: BoxDecoration(
+                    // color: Colors.green[300],
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, -10),
                       ),
-                      boxShadow: [
-                        BoxShadow(
-                          blurRadius: 5.0,
-                          spreadRadius: 20.0,
-                          offset: const Offset(0.0, 5.0),
-                          color: Colors.black.withOpacity(0.1),
-                        )
-                      ],
-                      color: Colors.white,
-                    ),
-                    // Contents of the sheet
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 20),
-                        Row(
-                          children: [
-                            const Spacer(),
-                            Container(
-                              height: 4,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(15.0),
-                                color: Colors.grey,
-                              ),
-                            ),
-                            const Spacer(),
-                          ],
-                        ),
-
-                        // Declare your sheet content widgets ahead
-                      ],
+                    ],
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(
+                        40,
+                      ),
                     ),
                   ),
+                  child: ListView(
+                    controller: scrollController,
+                    children: [
+                      ListTile(
+                        title: Text("\t\t가게 이름",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 22),
+                        ),
+                      ),
+                      Container(
+                        alignment: Alignment.center,
+                        padding: EdgeInsets.all(5),
+                        child: Container(
+                          width: 320, height: 230,
+                          decoration: BoxDecoration(
+                            // shape: BoxShape.rectangle,
+                            // color: Colors.amber,
+                            image: DecorationImage(
+                            image: AssetImage('images/store2.jpeg'),
+                            ),
+                          ),
+                        ),
+                        
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 35, top:10),
+                        
+                        child: Text("평점",
+                            style: TextStyle(
+                              fontSize: 20,
+                              ),
+                            ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 35),
+                        alignment: Alignment.bottomLeft,
+                        child: RatingBar.builder(
+                        itemSize: 20,
+                        initialRating: 3,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemBuilder: (context, _) => Icon(
+                          Icons.star,
+                          color: const Color.fromARGB(255, 26, 182, 107),
+                        ), onRatingUpdate: (double value) {  },
+                      ),
+                      ),
+                    ],
+                  ),
+                
                 );
+
+                
               },
+
             ),
           ),
         ],
