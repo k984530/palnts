@@ -8,6 +8,7 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[50],
       appBar: AppBar(
         backgroundColor: Colors.green,
         iconTheme: IconThemeData(color: Colors.white),
@@ -31,20 +32,6 @@ class StoreScreen extends StatelessWidget {
             onPressed: () {
               print("user button");
             },
-        backgroundColor: Colors.green[300],
-        flexibleSpace: Container(
-          margin: EdgeInsets.only(bottom: 10),
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            height: 40,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                alignment: Alignment.bottomCenter,
-                image: AssetImage(
-                  'images/logo2.png',
-                ),
-              ),
-            ),
           ),
         ],
       ),
@@ -120,7 +107,7 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.green[300],
+                            color: Colors.brown[(i + 1) % 9 * 100],
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
