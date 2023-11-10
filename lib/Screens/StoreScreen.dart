@@ -111,7 +111,7 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 217, 210, 208),
+                            color: Color.fromARGB(255, 246, 239, 237),
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
@@ -120,7 +120,7 @@ class StoreScreen extends StatelessWidget {
                                 offset: Offset(0, 4),
                                 blurRadius: 2,
                                 spreadRadius: 1,
-                                color: Colors.black45,
+                                color: Colors.black12,
                               ),
                             ],
                           ),

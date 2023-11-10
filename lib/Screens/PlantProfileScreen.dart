@@ -63,7 +63,7 @@ class PlantProfileScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                color: Colors.green[100],
+                color: Color.fromARGB(255, 246, 239, 237),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -75,7 +75,7 @@ class PlantProfileScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                color: Colors.green[100],
+                color: Color.fromARGB(255, 246, 239, 237),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Text(
@@ -87,7 +87,7 @@ class PlantProfileScreen extends StatelessWidget {
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
-                color: Colors.green[100],
+                color: Color.fromARGB(255, 246, 239, 237),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
@@ -122,8 +122,8 @@ class PlantProfileScreen extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       child: LinearProgressIndicator(
                         value: 0.7,
-                        valueColor:
-                            AlwaysStoppedAnimation<Color>(Colors.greenAccent),
+                        valueColor: AlwaysStoppedAnimation<Color>(
+                            const Color.fromARGB(255, 66, 147, 68)),
                         backgroundColor: Color(0xffD6D6D6),
                       ),
                     ),
