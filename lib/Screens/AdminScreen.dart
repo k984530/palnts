@@ -22,6 +22,13 @@ class AdminScreen extends StatelessWidget {
               label: Text("품종"),
             ),
           ),
+          Container(
+            child: Image(
+            image: AssetImage(
+              'images/plant.jpeg',
+            ),
+            ),
+          ),
         ],
       ),
     );

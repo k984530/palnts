@@ -37,9 +37,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   material: ^1.0.0+2
   get: ^4.6.6
-  carousel_slider:
-  flutter_rating_bar:
+  flutter_rating_bar: ^4.0.1
   kakao_map_plugin: ^0.2.2
+  dart_openai: ^4.0.0
+  envied: ^0.5.1
   flutter_chat_bubble: ^2.0.2
   http: ^1.1.0
   image_picker: ^1.0.4
@@ -54,6 +55,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  envied_generator: ^0.5.1
+  build_runner: ^2.4.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

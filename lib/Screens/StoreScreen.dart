@@ -9,6 +9,28 @@ class StoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.white),
+        actions: [
+          IconButton(
+            icon: Icon(
+              Icons.search_outlined,
+              color: Colors.white,
+              size: 30,
+            ),
+            onPressed: () {
+              print("search button");
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.person_outline_sharp,
+              color: Colors.white,
+              size: 30,
+            ),
+            onPressed: () {
+              print("user button");
+            },
         backgroundColor: Colors.green[300],
         flexibleSpace: Container(
           margin: EdgeInsets.only(bottom: 10),
@@ -24,7 +46,7 @@ class StoreScreen extends StatelessWidget {
               ),
             ),
           ),
-        ),
+        ],
       ),
       body: Container(
         alignment: Alignment.center,
@@ -34,19 +56,17 @@ class StoreScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 1,
-              child: Center(
-                child: Text(
-                  "플랜테리아 카페 이름",
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.brown,
-                  ),
+              child: Text(
+                "[그계절]",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.brown,
                 ),
               ),
             ),
             Expanded(
-              flex: 2,
+              flex: 3,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -58,6 +78,16 @@ class StoreScreen extends StatelessWidget {
                   ),
                 ],
               ),
+            ),
+            Container(
+              child: Text(
+                "평점",
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.grey,
+                ),
+              ),
+              margin: EdgeInsets.all(5),
             ),
             Container(
               child: RatingBar.builder(
