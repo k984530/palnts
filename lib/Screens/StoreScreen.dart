@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/route_manager.dart';
 
 class StoreScreen extends StatelessWidget {
@@ -48,22 +49,22 @@ class StoreScreen extends StatelessWidget {
                 'images/store1_1.jpg',
               ),
             ),
-            // Container(
-            //   child: RatingBar.builder(
-            //     initialRating: 0,
-            //     minRating: 0,
-            //     direction: Axis.horizontal,
-            //     allowHalfRating: true,
-            //     itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-            //     itemBuilder: (context, _) => Icon(
-            //       Icons.star,
-            //       color: Colors.lightGreen,
-            //     ),
-            //     onRatingUpdate: (rating) {
-            //       print(rating);
-            //     },
-            //   ),
-            // ),
+            Container(
+              child: RatingBar.builder(
+                initialRating: 0,
+                minRating: 0,
+                direction: Axis.horizontal,
+                allowHalfRating: true,
+                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+                itemBuilder: (context, _) => Icon(
+                  Icons.star,
+                  color: Colors.lightGreen,
+                ),
+                onRatingUpdate: (rating) {
+                  print(rating);
+                },
+              ),
+            ),
             Expanded(
               flex: 5,
               child: SingleChildScrollView(
