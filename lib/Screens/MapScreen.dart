@@ -17,6 +17,7 @@ class MapScreen extends StatelessWidget {
         DraggableScrollableController();
 
     return Scaffold(
+      appBar: AppBar(),
       body: Stack(
         children: <Widget>[
           KakaoMap(
@@ -71,6 +72,35 @@ class MapScreen extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            bottom: 70,
+            right: 105,
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed('/OthersPlants');
+              },
+              child: Container(
+                width: 60,
+                height: 60,
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.green[300],
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 1,
+                      spreadRadius: 1,
+                      offset: Offset(4, 4),
+                      color: Colors.grey,
+                    )
+                  ],
+                ),
+                child: Image.asset(
+                  'images/othersplants.png',
+                ),
+              ),
+            ),
+          ),
           SizedBox.expand(
             child: DraggableScrollableSheet(
               minChildSize: 0.1,
@@ -97,34 +127,43 @@ class MapScreen extends StatelessWidget {
                       ListView(
                         controller: scrollController,
                         children: <Widget>[
-                          ListTile(
-                            title: Text(
-                              "가게 1",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700, fontSize: 22),
-                            ),
-                            trailing: Container(
-                              alignment: Alignment.bottomRight,
-                              width: 150,
-                              height: 150,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage('images/store2.jpeg'),
+                          SizedBox(
+                            height: 35,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Get.toNamed('/Store');
+                            },
+                            child: ListTile(
+                              title: Text(
+                                "가게 1",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700, fontSize: 22),
+                              ),
+                              trailing: Container(
+                                alignment: Alignment.bottomRight,
+                                width: 150,
+                                height: 150,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: AssetImage('images/store2.jpeg'),
+                                  ),
                                 ),
                               ),
-                            ),
-                            subtitle: RatingBar.builder(
-                              itemSize: 15,
-                              initialRating: 4.5,
-                              minRating: 1,
-                              direction: Axis.horizontal,
-                              allowHalfRating: true,
-                              itemCount: 5,
-                              itemBuilder: (context, _) => Icon(
-                                Icons.star,
-                                color: const Color.fromARGB(255, 26, 182, 107),
+                              subtitle: RatingBar.builder(
+                                itemSize: 15,
+                                initialRating: 4.5,
+                                minRating: 1,
+                                direction: Axis.horizontal,
+                                allowHalfRating: true,
+                                itemCount: 5,
+                                itemBuilder: (context, _) => Icon(
+                                  Icons.star,
+                                  color:
+                                      const Color.fromARGB(255, 26, 182, 107),
+                                ),
+                                onRatingUpdate: (double value) {},
                               ),
-                              onRatingUpdate: (double value) {},
                             ),
                           ),
                           Divider(color: Colors.grey),

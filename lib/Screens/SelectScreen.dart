@@ -33,8 +33,16 @@ class SelectScreen extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.all(15),
                 height: 40,
-                color: Colors.green[400],
                 alignment: Alignment.center,
+                decoration: BoxDecoration(
+                    color: Colors.green[400],
+                    borderRadius: BorderRadius.circular(6),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 4),
+                        color: Colors.grey,
+                      ),
+                    ]),
                 child: Text(
                   "나만의 정원",
                   style: TextStyle(
@@ -51,7 +59,15 @@ class SelectScreen extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(bottom: 80, right: 15, left: 15),
                 height: 40,
-                color: Colors.green[400],
+                decoration: BoxDecoration(
+                    color: Colors.green[400],
+                    borderRadius: BorderRadius.circular(6),
+                    boxShadow: [
+                      BoxShadow(
+                        offset: Offset(0, 4),
+                        color: Colors.grey,
+                      ),
+                    ]),
                 alignment: Alignment.center,
                 child: Text(
                   "주변의 정원",
