@@ -44,6 +44,7 @@ dependencies:
   flutter_chat_bubble: ^2.0.2
   http: ^1.1.0
   image_picker: ^1.0.4
+  fl_chart: ^0.64.0
 
 dev_dependencies:
   flutter_test:
