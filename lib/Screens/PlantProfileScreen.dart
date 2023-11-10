@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PlantProfileScreen extends StatelessWidget {
   const PlantProfileScreen({super.key});
@@ -7,7 +8,9 @@ class PlantProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.toNamed('/Chat');
+        },
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(45),
         ),
@@ -24,7 +27,7 @@ class PlantProfileScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
               child: Text(
-                'name',
+                '새싹이',
                 style: TextStyle(
                   fontSize: 24,
                 ),
@@ -36,10 +39,48 @@ class PlantProfileScreen extends StatelessWidget {
                 10,
               ),
               decoration: BoxDecoration(
-                  color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+                color: Colors.brown,
+              ),
+              child: Image(
+                image: AssetImage(
+                  'images/plant.jpeg',
+                ),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  width: 35,
+                  height: 35,
+                  margin: EdgeInsets.only(right: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  ),
+                ),
+                Container(
+                  width: 35,
+                  height: 35,
+                  margin: EdgeInsets.only(right: 20),
+                  decoration: BoxDecoration(
+                    color: Colors.brown,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Icon(
+                    Icons.favorite,
+                    size: 20,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 30, bottom: 10),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
               padding: EdgeInsets.all(10),
               alignment: Alignment.centerLeft,
               decoration: BoxDecoration(
