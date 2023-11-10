@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 import 'package:plants/Screens/AdminScreen.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: AdminScreen(),
+      home: StoreScreen(),
       getPages: [
         GetPage(
           name: '/Chat',
