@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_bubble/chat_bubble.dart';
+import 'package:plants/Component/Chatbubble.dart';
 
 class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
@@ -15,51 +16,8 @@ class ChatScreen extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ChatBubble(
-                alignment: Alignment.centerRight,
-                margin: EdgeInsets.all(10),
-                backGroundColor: Colors.green,
-                clipper: ChatBubbleClipper2(
-                  type: BubbleType.sendBubble,
-                ),
-                child: Text(
-                  "test",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: CircleAvatar(),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: CircleAvatar(),
-              ),
-              ChatBubble(
-                alignment: Alignment.centerLeft,
-                margin: EdgeInsets.all(10),
-                backGroundColor: Colors.green,
-                clipper: ChatBubbleClipper2(
-                  type: BubbleType.receiverBubble,
-                ),
-                child: Text(
-                  "test",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ],
-          ),
+          plantBubble('안녕?'),
+          userBubble("응응 반가워~"),
           Spacer(),
           Row(
             children: [
