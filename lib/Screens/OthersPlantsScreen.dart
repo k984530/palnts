@@ -8,6 +8,13 @@ class OthersPlantsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: Text("우리의 정원"),
+        centerTitle: true,
+        titleTextStyle: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontWeight: FontWeight.bold,
+        ),
         backgroundColor: Colors.green.shade400,
         elevation: 3,
         shadowColor: Colors.grey,

@@ -13,6 +13,7 @@ class OtherdataScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        title: Text("상세설명"),
         centerTitle: true,
         titleTextStyle: TextStyle(
           color: Colors.white,
@@ -41,12 +42,12 @@ class OtherdataScreen extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   height: 150,
                   margin: EdgeInsets.all(15),
-                  child: Image.asset('images/personal_plant2.jpeg'),
+                  child: Image.asset('images/plant0.jpeg'),
                   decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
@@ -61,7 +62,7 @@ class OtherdataScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   margin: EdgeInsets.all(15),
                   child: Text(
-                    "식물명",
+                    "인도 고무나무",
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,

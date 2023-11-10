@@ -42,7 +42,7 @@ class MydataScreen extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
                   height: 150,
@@ -62,9 +62,9 @@ class MydataScreen extends StatelessWidget {
                   alignment: Alignment.center,
                   margin: EdgeInsets.all(15),
                   child: Text(
-                    "식물명",
+                    "호미란 산세비에리아",
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
                     ),
