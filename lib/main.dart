@@ -7,6 +7,8 @@ import 'package:plants/Screens/ChatScreen.dart';
 import 'package:plants/Screens/MapScreen.dart';
 import 'package:plants/Screens/PlantProfileScreen.dart';
 
+import 'Screens/ResisterPlant.dart';
+
 void main() {
   AuthRepository.initialize(appKey: '17eadd0cc722ec44323a286f5534d4b1');
   runApp(const MyApp());
@@ -39,6 +41,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/Profile',
           page: () => PlantProfileScreen(),
+        ),
+        GetPage(
+          name: '/Resister',
+          page: () => ResisterPlant(),
         ),
       ],
     );

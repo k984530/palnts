@@ -8,9 +8,8 @@ class StoreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[50],
       appBar: AppBar(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.green[300],
         flexibleSpace: Container(
           margin: EdgeInsets.only(bottom: 10),
           alignment: Alignment.bottomCenter,
@@ -91,7 +90,7 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.brown[(i + 1) % 9 * 100],
+                            color: Colors.green[300],
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
