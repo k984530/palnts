@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -31,45 +30,45 @@ class StoreScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              "플랜테리아 카페 이름",
-              style: TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                color: Colors.brown,
+            Expanded(
+              flex: 1,
+              child: Text(
+                "플랜테리아 카페 이름",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.brown,
+                ),
               ),
             ),
-            Container(
-              height: 250,
-              margin: EdgeInsets.all(
-                10,
-              ),
+            Expanded(
+              flex: 2,
               child: Image.asset(
                 'images/store1_1.jpg',
               ),
             ),
-            Container(
-              child: RatingBar.builder(
-                initialRating: 0,
-                minRating: 0,
-                direction: Axis.horizontal,
-                allowHalfRating: true,
-                itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-                itemBuilder: (context, _) => Icon(
-                  Icons.star,
-                  color: Colors.lightGreen,
-                ),
-                onRatingUpdate: (rating) {
-                  print(rating);
-                },
-              ),
-            ),
-            Container(
-              height: 400,
+            // Container(
+            //   child: RatingBar.builder(
+            //     initialRating: 0,
+            //     minRating: 0,
+            //     direction: Axis.horizontal,
+            //     allowHalfRating: true,
+            //     itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+            //     itemBuilder: (context, _) => Icon(
+            //       Icons.star,
+            //       color: Colors.lightGreen,
+            //     ),
+            //     onRatingUpdate: (rating) {
+            //       print(rating);
+            //     },
+            //   ),
+            // ),
+            Expanded(
+              flex: 5,
               child: SingleChildScrollView(
                 child: Column(
                   children: <Widget>[
-                    for (int i = 0; i < 4; i++)
+                    for (int i = 0; i < 7; i++)
                       Container(
                         height: 80,
                         margin: EdgeInsets.all(10),
