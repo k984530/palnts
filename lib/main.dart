@@ -25,11 +25,20 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         useMaterial3: true,
       ),
-      home: StoreScreen(),
+      home: MapScreen(),
       getPages: [
+        GetPage(name: '/Map', page: () => MapScreen()),
+        GetPage(
+          name: '/Store',
+          page: () => StoreScreen(),
+        ),
         GetPage(
           name: '/Chat',
           page: () => ChatScreen(),
+        ),
+        GetPage(
+          name: '/Profile',
+          page: () => PlantProfileScreen(),
         ),
       ],
     );

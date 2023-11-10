@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
@@ -69,13 +70,18 @@ class StoreScreen extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     for (int i = 0; i < 7; i++)
-                      Container(
-                        height: 80,
-                        margin: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                          color: Colors.brown[(i + 1) % 9 * 100],
-                          borderRadius: BorderRadius.circular(
-                            10,
+                      GestureDetector(
+                        onTap: () {
+                          Get.toNamed('/Profile');
+                        },
+                        child: Container(
+                          height: 80,
+                          margin: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                            color: Colors.brown[(i + 1) % 9 * 100],
+                            borderRadius: BorderRadius.circular(
+                              10,
+                            ),
                           ),
                         ),
                       )
