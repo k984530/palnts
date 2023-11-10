@@ -8,9 +8,10 @@ class SelectScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.green[50],
       ),
       body: Container(
+        color: Colors.green[50],
         alignment: Alignment.center,
         child: Column(
           children: [

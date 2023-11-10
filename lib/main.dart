@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plants/Screens/MyGardenScreen.dart';
+import 'package:plants/Screens/MydataScreen.dart';
 import 'package:plants/Screens/SelectScreen.dart';
 import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
@@ -32,8 +33,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: MapScreen(),
-      home: SelectScreen(),
+      // home: SelectScreen(),
+      home: MydataScreen(),
       getPages: [
         GetPage(
           name: '/Map',
