@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:plants/Screens/SelectScreen.dart';
+import 'package:plants/Screens/StoreScreen.dart';
 import 'package:get/route_manager.dart';
 import 'package:kakao_map_plugin/kakao_map_plugin.dart';
 import 'package:plants/Screens/ChatScreen.dart';
@@ -25,12 +27,29 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: StoreScreen(),
+      // home: MapScreen(),
+      home: SelectScreen(),
       getPages: [
+        GetPage(
+          name: '/Map',
+          page: () => MapScreen(),
+        ),
+        GetPage(
+          name: '/Store',
+          page: () => StoreScreen(),
+        ),
         GetPage(
           name: '/Chat',
           page: () => ChatScreen(),
         ),
+        GetPage(
+          name: '/Profile',
+          page: () => PlantProfileScreen(),
+        ),
+        GetPage(
+          name: '/Select',
+          page: () => SelectScreen(),
+        )
       ],
     );
   }
