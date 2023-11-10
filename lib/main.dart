@@ -1,37 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:plants/Screens/StoreScreen.dart';
-import 'package:get/route_manager.dart';
-import 'package:kakao_map_plugin/kakao_map_plugin.dart';
-import 'package:plants/Screens/AdminScreen.dart';
-import 'package:plants/Screens/ChatScreen.dart';
-import 'package:plants/Screens/MapScreen.dart';
-import 'package:plants/Screens/PlantProfileScreen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get_navigation/src/routes/get_route.dart';
+
+import 'Screens/MapScreen.dart';
 
 void main() {
-  AuthRepository.initialize(appKey: '17eadd0cc722ec44323a286f5534d4b1');
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: StoreScreen(),
-      getPages: [
-        GetPage(
-          name: '/Chat',
-          page: () => ChatScreen(),
-        ),
-      ],
+      home: MapScreen(),
     );
   }
 }
