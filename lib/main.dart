@@ -53,6 +53,10 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/Select',
           page: () => SelectScreen(),
+        ),
+        GetPage(
+          name: '/Resister',
+          page: () => ResisterPlant(),
         )
       ],
     );
