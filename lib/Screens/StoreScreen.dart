@@ -111,7 +111,7 @@ class StoreScreen extends StatelessWidget {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: Colors.brown.shade100,
+                            color: const Color.fromARGB(255, 217, 210, 208),
                             borderRadius: BorderRadius.circular(
                               10,
                             ),
@@ -135,7 +135,6 @@ class StoreScreen extends StatelessWidget {
                                       PlantsName[i] +
                                       "\n품종 : " +
                                       Plantskind[i],
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               Spacer(),

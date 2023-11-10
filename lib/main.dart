@@ -83,6 +83,10 @@ class MyApp extends StatelessWidget {
           name: '/OtherData',
           page: () => OtherdataScreen(),
         ),
+        GetPage(
+          name: '/Calender',
+          page: () => CalenderScreen(),
+        ),
       ],
     );
   }

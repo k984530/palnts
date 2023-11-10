@@ -13,7 +13,7 @@ class OtherdataScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("상세설명"),
+        title: Text("식물 상세정보"),
         centerTitle: true,
         titleTextStyle: TextStyle(
           color: Colors.white,
@@ -76,16 +76,10 @@ class OtherdataScreen extends StatelessWidget {
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreen.shade400,
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 6),
-                    color: Colors.black12,
-                  ),
-                ],
+                color: Color.fromARGB(100, 249, 249, 242),
               ),
               child: SfCartesianChart(
-                palette: [Colors.brown.shade600],
+                palette: [Color.fromARGB(255, 2, 96, 26)],
                 title: ChartTitle(text: '흙의 수분량'),
                 primaryXAxis: CategoryAxis(),
                 series: <LineSeries<Plantdata, String>>[
@@ -113,16 +107,10 @@ class OtherdataScreen extends StatelessWidget {
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreen.shade400,
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 6),
-                    color: Colors.black12,
-                  ),
-                ],
+                color: Color.fromARGB(100, 249, 249, 242),
               ),
               child: SfCartesianChart(
-                palette: [Colors.brown.shade600],
+                palette: [Color.fromARGB(255, 2, 96, 26)],
                 title: ChartTitle(text: '조도량'),
                 primaryXAxis: CategoryAxis(),
                 series: <LineSeries<Plantdata, String>>[
@@ -150,16 +138,10 @@ class OtherdataScreen extends StatelessWidget {
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreen.shade400,
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 6),
-                    color: Colors.black12,
-                  ),
-                ],
+                color: Color.fromARGB(100, 249, 249, 242),
               ),
               child: SfCartesianChart(
-                palette: [Colors.brown.shade600],
+                palette: [Color.fromARGB(255, 2, 96, 26)],
                 title: ChartTitle(text: '평균 온도'),
                 primaryXAxis: CategoryAxis(),
                 series: <LineSeries<Plantdata, String>>[
@@ -187,16 +169,10 @@ class OtherdataScreen extends StatelessWidget {
               margin: EdgeInsets.all(15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreen.shade400,
-                boxShadow: [
-                  BoxShadow(
-                    offset: Offset(0, 6),
-                    color: Colors.black12,
-                  ),
-                ],
+                color: Color.fromARGB(100, 249, 249, 242),
               ),
               child: SfCartesianChart(
-                palette: [Colors.brown.shade600],
+                palette: [Color.fromARGB(255, 2, 96, 26)],
                 title: ChartTitle(text: '흙의 양분량'),
                 primaryXAxis: CategoryAxis(),
                 series: <LineSeries<Plantdata, String>>[

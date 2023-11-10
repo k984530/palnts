@@ -31,7 +31,7 @@ class PlantProfileScreen extends StatelessWidget {
                 10,
               ),
               decoration: BoxDecoration(
-                color: Colors.brown,
+                color: Colors.brown[50],
               ),
               child: Image(
                 image: AssetImage(
@@ -47,7 +47,7 @@ class PlantProfileScreen extends StatelessWidget {
                   height: 35,
                   margin: EdgeInsets.only(right: 20),
                   decoration: BoxDecoration(
-                    color: Colors.brown,
+                    color: Colors.brown[50],
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Icon(
