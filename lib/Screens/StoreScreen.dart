@@ -48,8 +48,16 @@ class StoreScreen extends StatelessWidget {
             ),
             Expanded(
               flex: 2,
-              child: Image.asset(
-                'images/store1_1.jpg',
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'images/store1_1.jpg',
+                  ),
+                  Image.asset(
+                    'images/store1_2.jpg',
+                  ),
+                ],
               ),
             ),
             Container(
